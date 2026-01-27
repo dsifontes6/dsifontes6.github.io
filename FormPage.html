@@ -8,32 +8,32 @@
 <body>
     <h1>Pizza Ordering Form</h1>
 
-    <h2>Contact Information</h2>
+    <h1>Contact Information</h1>
 
     <label for="inName">Name</label>
-    <input type="text" name="inName" id="inName">
+    <input type="text" name="inName" id="inName"> <br />
 
-    <label for="inPhone">Name</label>
-    <input type="number" name="inPhone" id="inPhone"> <!-- validate -->
+    <label for="inPhone">Phone</label>
+    <input type="number" name="inPhone" id="inPhone"> <br /><!-- validate -->
 
-    <label for="inEmail">Name</label>
-    <input type="email" name="inEmail" id="inEmail">
+    <label for="inEmail">Email</label>
+    <input type="email" name="inEmail" id="inEmail"> <br />
 
-    <h3>Select Pizza Size</h3>
+    <h1>Select Pizza Size</h1>
 
-    <select name="pizzaSize" id="pizzaSize">
+    <label for="pizzaSize">"Pizza Size: "</label><select name="pizzaSize" id="pizzaSize">
         <option>Small</option>
         <option>Medium</option>
         <option>Large</option>
     </select>
 
-    <h4>Select Sauce</h4>
+    <h1>Select Sauce</h1>
 
-    <input type="radio" name="Sauce" /><label>Marinara</label>
-    <input type="radio" name="Sauce" /><label>Ranch</label>
-    <input type="radio" name="Sauce" /><label>No Sauce</label>
+    <input type="radio" name="Sauce" /><label>Marinara</label> <br />
+    <input type="radio" name="Sauce" /><label>Ranch</label> <br />
+    <input type="radio" name="Sauce" /><label>No Sauce</label> <br />
 
-    <h5>Select Toppings</h5>
+    <h1>Select Toppings</h1>
 
     <input type="checkbox" id="topping1" name="topping1" value="Pepperoni">
     <label for="topping1"> Pepperoni</label>
@@ -48,39 +48,47 @@
     <input type="checkbox" id="topping6" name="topping6" value="Onions">
     <label for="topping6"> Onions</label>
 
-    <h6>Additional Instructions</h6>
+    <h1>Additional Instructions</h1>
 
-    <textarea name="instructions">Add instructions</textarea>
+    <textarea name="instructions">Add instructions</textarea> <br />
     <input type="submit" value="Submit"><br />
 
     <p>List of My Favorite Games</p>
 
     <table>
-        <input type="checkbox" id="topping3" name="topping5" value="Peppers">
-        <label for="topping5"> Peppers</label>
+        border: 1px solid black;
         <tr>
+            border: 1px solid black;
             <th>Title</th>
             <th>Developer</th>
             <th>Year</th> <!-- merge years column -->>
         </tr>
         <tr>
+            border: 1px solid black;
             <td>Payday 2</td>
             <td>Overkill Studio</td>
             <td>2013</td>
         </tr>
         <tr>
+            border: 1px solid black;
             <td>Slay the Spire</td>
             <td>Mega Crit</td>
             <td>2016</td>
         </tr>
         <tr>
+            border: 1px solid black;
             <td>Dark Souls 3</td>
             <td>From Software</td> <!-- here -->
         </tr>
         <tr>
+            border: 1px solid black;
             <td>Deadeye Deepspace Simulacrum</td>
             <td>nodayshalleraseyou</td>
             <td>2025</td>
+        </tr>
+        <tr>
+            border: 1px solid black;
+            <td>Count: 4</td>
         </tr>
     </table>
 </body>
