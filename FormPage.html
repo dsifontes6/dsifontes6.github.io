@@ -5,35 +5,41 @@
     <meta charset="utf-8" />
     <title></title>
 </head>
+<style>
+table, th, td { 
+    border: 1px solid black;
+}
+</style>
 <body>
     <h1>Pizza Ordering Form</h1>
 
-    <h1>Contact Information</h1>
+    <h2>Contact Information</h2>
 
     <label for="inName">Name</label>
-    <input type="text" name="inName" id="inName"> <br />
+    <input type="text" name="inName" id="inName" required title="Please enter your name."> <br />
 
     <label for="inPhone">Phone</label>
-    <input type="number" name="inPhone" id="inPhone"> <br /><!-- validate -->
+    <input type="tel" name="inPhone" id="inPhone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter a valid phone number."> <br />
 
     <label for="inEmail">Email</label>
-    <input type="email" name="inEmail" id="inEmail"> <br />
+    <input type="email" name="inEmail" id="inEmail" required title="Please enter a valid email."> <br />
 
-    <h1>Select Pizza Size</h1>
+    <h2>Select Pizza Size</h2>
 
-    <label for="pizzaSize">"Pizza Size: "</label><select name="pizzaSize" id="pizzaSize">
-        <option>Small</option>
+    <label for="pizzaSize">Pizza Size: </label><select name="pizzaSize" id="pizzaSize" required title="Please select a size.">
+        <option>--Select Size--</option>
         <option>Medium</option>
         <option>Large</option>
+        <option>XLarge</option>
     </select>
 
-    <h1>Select Sauce</h1>
+    <h2>Select Sauce</h2>
+     
+    <input type="radio" id="marinara" name="Sauce" value="Marinara"/><label for="marinara">Marinara</label> <br />
+    <input type="radio" id="ranch" name="Sauce" value="Ranch" /><label for="ranch">Ranch</label> <br />
+    <input type="radio" id="nosauce" name="Sauce" value="No Sauce" /><label for="nosauce">No Sauce</label> <br />
 
-    <input type="radio" name="Sauce" /><label>Marinara</label> <br />
-    <input type="radio" name="Sauce" /><label>Ranch</label> <br />
-    <input type="radio" name="Sauce" /><label>No Sauce</label> <br />
-
-    <h1>Select Toppings</h1>
+    <h2>Select Toppings</h2>
 
     <input type="checkbox" id="topping1" name="topping1" value="Pepperoni">
     <label for="topping1"> Pepperoni</label>
@@ -48,7 +54,7 @@
     <input type="checkbox" id="topping6" name="topping6" value="Onions">
     <label for="topping6"> Onions</label>
 
-    <h1>Additional Instructions</h1>
+    <h2>Additional Instructions</h2>
 
     <textarea name="instructions">Add instructions</textarea> <br />
     <input type="submit" value="Submit"><br />
@@ -56,39 +62,32 @@
     <p>List of My Favorite Games</p>
 
     <table>
-        border: 1px solid black;
         <tr>
-            border: 1px solid black;
             <th>Title</th>
             <th>Developer</th>
             <th>Year</th> <!-- merge years column -->>
         </tr>
         <tr>
-            border: 1px solid black;
             <td>Payday 2</td>
             <td>Overkill Studio</td>
             <td>2013</td>
         </tr>
         <tr>
-            border: 1px solid black;
             <td>Slay the Spire</td>
             <td>Mega Crit</td>
-            <td>2016</td>
+            <td rowspan="2">2016</td>
         </tr>
         <tr>
-            border: 1px solid black;
             <td>Dark Souls 3</td>
             <td>From Software</td> <!-- here -->
         </tr>
         <tr>
-            border: 1px solid black;
-            <td>Deadeye Deepspace Simulacrum</td>
-            <td>nodayshalleraseyou</td>
+            <td>Deadeye Deepspace Simulacrum </td>
+            <td>nodayshalleraseyou </td>
             <td>2025</td>
         </tr>
         <tr>
-            border: 1px solid black;
-            <td>Count: 4</td>
+            <td colspan="3">Count: 4</td>
         </tr>
     </table>
 </body>
