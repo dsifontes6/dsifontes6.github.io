@@ -1,0 +1,110 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --accent: #38bdf8;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+    body > * {
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+}
+
+h3:first-of-type {
+    text-align: center;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.4rem;
+    color: var(--accent);
+    position: relative;
+}
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: var(--accent);
+        margin-top: 6px;
+    }
+
+h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+    a:hover {
+        opacity: 0.75;
+    }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: var(--spacing-lg) auto;
+    border-radius: 6px;
+}
+
+@media (min-width: 1024px) {
+
+    body {
+        padding: 4rem 2rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+    }
+}
